@@ -1,8 +1,7 @@
 name: todoapp-deployment
-run-name: ${{ github.actor }} - ${{ github.sha }}
-
-on: 
-  push: 
+run-name: triggered by ${{ github.actor }} by ${{ github.event_name}} for ${{ github.sha }}
+on:
+  push:
     branches: ["main", "develop"]
   pull_request:
     branches: ["main"]
